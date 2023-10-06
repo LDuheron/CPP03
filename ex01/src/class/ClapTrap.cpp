@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:42 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/06 19:32:17 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/06 19:42:34 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 unsigned int	ClapTrap::_defaultAttackDamage(0);
 unsigned int	ClapTrap::_defaultEnergyPoints(10);
 unsigned int	ClapTrap::_defaultHitPoints(10);
+std::string		ClapTrap::_defaultName("Heidi");
 
 // Constructor -----------------------------------------------------------------
 
@@ -24,7 +25,7 @@ unsigned int	ClapTrap::_defaultHitPoints(10);
  * 
  * @return	The newly created ClapTrap instance.
  */
-ClapTrap::ClapTrap() : _name("Brad"), _attackDamage(ClapTrap::_defaultAttackDamage),
+ClapTrap::ClapTrap() : _name(ClapTrap::_defaultName), _attackDamage(ClapTrap::_defaultAttackDamage),
 _energyPoints(ClapTrap::_defaultEnergyPoints),_hitPoints(ClapTrap::_defaultHitPoints)
 {
 	std::cout << "Default constructor called.\n";
@@ -44,7 +45,7 @@ _energyPoints(src._energyPoints), _hitPoints(src._hitPoints)
 
 
 ClapTrap::ClapTrap( unsigned int attackDamage, unsigned int energyPoints, unsigned int hitPoints) : 
-_name("Heidi"), _attackDamage(attackDamage), _energyPoints(energyPoints), _hitPoints(hitPoints)
+_name(ClapTrap::_defaultName), _attackDamage(attackDamage), _energyPoints(energyPoints), _hitPoints(hitPoints)
 {
 	std::cout << "ClapTrap constructor called.\n";
 }
