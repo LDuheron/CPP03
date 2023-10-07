@@ -22,10 +22,11 @@ PRV_DIR		= 	private
 ######################################
 #            SOURCE FILES            #
 ######################################
-SRC			=						\
-				class/ClapTrap.cpp	\
-				class/FragTrap.cpp	\
-				class/ScavTrap.cpp	\
+SRC			=							\
+				class/ClapTrap.cpp		\
+				class/DiamondTrap.cpp	\
+				class/FragTrap.cpp		\
+				class/ScavTrap.cpp		\
 				main.cpp
 
 ######################################
