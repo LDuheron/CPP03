@@ -39,7 +39,7 @@ DEP			=	${OBJ:.o=.d}
 #                FLAGS                #
 #######################################
 CXXFLAGS	=	-c
-CXXFLAGS	+=	-Wall -Wextra -Werror -g3
+CXXFLAGS	+=	-Wall -Wextra -Werror
 CXXFLAGS	+=	-MMD -MP
 CXXFLAGS	+=	-Wshadow
 CXXFLAGS	+=	-std=c++98
@@ -69,4 +69,4 @@ re: clean all
 
 fre: fclean all
 
-.PHONY:	all clean fclean re fre
+.PHONY:	all clean fclean re

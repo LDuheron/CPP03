@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:29 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/07 08:55:11 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/07 09:08:31 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ClapTrap
 		static std::string	_defaultName;
 		
 	protected:
-		std::string	_name;
+		std::string			_name;
 		unsigned int		_attackDamage;
 		unsigned int		_energyPoints;
 		unsigned int		_hitPoints;

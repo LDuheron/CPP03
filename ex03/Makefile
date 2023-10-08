@@ -71,4 +71,4 @@ re: clean all
 
 fre: fclean all
 
-.PHONY:	all clean fclean re fre
+.PHONY:	all clean fclean re
