@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:29 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 20:12:46 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:48:15 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class ClapTrap
 		unsigned int			_hitPoints;
 		
 		ClapTrap( unsigned int attackDamage, unsigned int energyPoints, unsigned int hitPoints);
+		ClapTrap( std::string name, unsigned int attackDamage, unsigned int energyPoints, unsigned int hitPoints);
 
 	public:
 

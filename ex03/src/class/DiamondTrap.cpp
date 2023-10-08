@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:10:32 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 20:17:32 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 21:52:01 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,16 @@
  * @return	The newly created DiamondTrap instance.
  */
 
-DiamondTrap::DiamondTrap() : _name(_defaultName)
+DiamondTrap::DiamondTrap() : ClapTrap("Axel_clap_name", FragTrap::_defaultAttackDamage, 
+ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints)
 {
 	std::cout << "DiamondTrap default constructor called.\n";
 }
+
+// DiamondTrap::DiamondTrap() : ClapTrap("Axel_clap_trap"), ScavTrap(), FragTrap()
+// {
+// 	std::cout << "DiamondTrap default constructor called.\n";
+// }
 
 /**
  * @brief	Construct a new `DiamondTrap` instance,
@@ -32,16 +38,18 @@ DiamondTrap::DiamondTrap() : _name(_defaultName)
  * 
  * @param	src is the model instance. 
  */
-DiamondTrap::DiamondTrap( const DiamondTrap & src ) : ClapTrap(src)
+DiamondTrap::DiamondTrap( const DiamondTrap & src ) : ClapTrap(src._defaultName,
+ src._defaultAttackDamage, src._defaultEnergyPoints, src._defaultHitPoints)
 {
 	std::cout << "DiamondTrap copy constructor called.\n";
 }
 
-DiamondTrap::DiamondTrap( std::string name ) : _name(name)
+DiamondTrap::DiamondTrap( std::string name ) :
+ClapTrap(name + std::string("_clap_name"), FragTrap::_defaultAttackDamage, 
+ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints)
 {
 	std::cout << "DiamondTrap default constructor called.\n";
 }
-
 
 // Destructor ------------------------------------------------------------------
 
@@ -116,5 +124,5 @@ std::ostream &		operator<<(std::ostream & lhs, DiamondTrap const & rhs )
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap is " << this->_name << " and it's ClapTrap name is " << _defaultName << ".\n";
+	std::cout << "DiamondTrap name is " << this->_name << " and it's ClapTrap name is " << _defaultName << ".\n";
 }
