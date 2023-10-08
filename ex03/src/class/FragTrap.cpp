@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 08:49:00 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/07 08:55:28 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:08:33 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ unsigned int	FragTrap::_defaultHitPoints(100);
 // 	std::cout << "FragTrap default constructor called.\n";
 // }
 
-FragTrap::FragTrap() : ClapTrap(_defaultAttackDamage, _defaultEnergyPoints, _defaultHitPoints)
+FragTrap::FragTrap() : ClapTrap(FragTrap::_defaultAttackDamage, FragTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints)
 {
 	std::cout << "FragTrap default constructor called.\n";
 }
@@ -121,5 +121,5 @@ std::ostream &		operator<<(std::ostream & lhs, FragTrap const & rhs )
 
 void FragTrap::highFivesGuys()
 {
-	std::cout << "High fives guys ?!!!\n";
+	std::cout << "High fives guys?!!!\n";
 }

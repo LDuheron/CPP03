@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 17:49:36 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 19:39:40 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:59:28 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ unsigned int	ScavTrap::_defaultHitPoints(100);
 // 	std::cout << "ScavTrap default constructor called.\n";
 // }
 
-ScavTrap::ScavTrap() : ClapTrap(_defaultAttackDamage, _defaultEnergyPoints, _defaultHitPoints)
+ScavTrap::ScavTrap() : ClapTrap(ScavTrap::_defaultAttackDamage, ScavTrap::_defaultEnergyPoints, ScavTrap::_defaultHitPoints)
 {
 	std::cout << "ScavTrap default constructor called.\n";
 }

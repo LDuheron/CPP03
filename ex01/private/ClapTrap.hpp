@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:29 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 19:24:44 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:01:15 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ClapTrap
 		unsigned int			_energyPoints;
 		unsigned int			_hitPoints;
 		
-		ClapTrap( unsigned int _attackDamage, unsigned int _energyPoints, unsigned int _hitPoints);
+		ClapTrap( unsigned int attackDamage, unsigned int energyPoints, unsigned int hitPoints);
 
 	public:
 
