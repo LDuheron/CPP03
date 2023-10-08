@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:10:32 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 17:53:57 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:17:32 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ DiamondTrap::DiamondTrap( const DiamondTrap & src ) : ClapTrap(src)
 {
 	std::cout << "DiamondTrap copy constructor called.\n";
 }
+
+DiamondTrap::DiamondTrap( std::string name ) : _name(name)
+{
+	std::cout << "DiamondTrap default constructor called.\n";
+}
+
 
 // Destructor ------------------------------------------------------------------
 

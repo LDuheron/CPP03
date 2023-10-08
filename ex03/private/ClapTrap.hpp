@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:29 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 20:01:53 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:12:46 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class ClapTrap
 		void					setEnergyPoints(unsigned int const energyPoints);
 		void					setHitPoints(unsigned int const hitPoints);
 
-		ClapTrap &		operator=( ClapTrap const & rhs );
+		ClapTrap &				operator=( ClapTrap const & rhs );
 
 		void					attack(const std::string& target);
 		void					takeDamage(unsigned int amount);

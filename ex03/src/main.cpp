@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:43:02 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 17:54:57 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:18:54 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	main(void)
 {
-	DiamondTrap a;
+	DiamondTrap a("Meryem");
 
 	std::cout << a;
 	std::cout << "\n";

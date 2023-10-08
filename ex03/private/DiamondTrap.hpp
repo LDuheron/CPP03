@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:16:39 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 19:28:06 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:16:28 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 	public:
 
 		DiamondTrap();
+		DiamondTrap( std::string name );
 		DiamondTrap( DiamondTrap const & src );
 		DiamondTrap( unsigned int _attackDamage, unsigned int _energyPoints, unsigned int _hitPoints);
 		~DiamondTrap();
@@ -44,9 +45,9 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		void					setEnergyPoints(unsigned int const energyPoints);
 		void					setHitPoints(unsigned int const hitPoints);
 
-		DiamondTrap &		operator=( DiamondTrap const & rhs );
+		DiamondTrap &			operator=( DiamondTrap const & rhs );
 
-		using	ScavTrap::attack;
+		using					ScavTrap::attack;
 		void					whoAmI();
 
 };

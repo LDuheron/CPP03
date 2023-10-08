@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:17:48 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 19:28:33 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:13:03 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class FragTrap : public virtual ClapTrap
 		void					setHitPoints(unsigned int const hitPoints);
 
 
-		FragTrap &		operator=( FragTrap const & rhs );
+		FragTrap &				operator=( FragTrap const & rhs );
 
 		void					highFivesGuys(void);
 
