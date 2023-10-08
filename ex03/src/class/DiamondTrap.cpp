@@ -6,16 +6,11 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:10:32 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/07 09:20:20 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:33:25 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "DiamondTrap.hpp"
-
-unsigned int	DiamondTrap::_defaultAttackDamage(20);
-unsigned int	DiamondTrap::_defaultEnergyPoints(50);
-unsigned int	DiamondTrap::_defaultHitPoints(100);
-
 
 // Constructor -----------------------------------------------------------------
 
@@ -25,17 +20,11 @@ unsigned int	DiamondTrap::_defaultHitPoints(100);
  * 
  * @return	The newly created DiamondTrap instance.
  */
-// DiamondTrap::DiamondTrap() : _name("Jonathan"), _attackDamage(DiamondTrap::_defaultAttackDamage),
-// _energyPoints(DiamondTrap::_defaultEnergyPoints),_hitPoints(DiamondTrap::_defaultHitPoints)
-// {
-// 	std::cout << "DiamondTrap default constructor called.\n";
-// }
 
-DiamondTrap::DiamondTrap() : ClapTrap(_defaultAttackDamage, _defaultEnergyPoints, _defaultHitPoints)
+DiamondTrap::DiamondTrap() : _name(_defaultName)
 {
 	std::cout << "DiamondTrap default constructor called.\n";
 }
-
 
 /**
  * @brief	Construct a new `DiamondTrap` instance,
@@ -119,22 +108,7 @@ std::ostream &		operator<<(std::ostream & lhs, DiamondTrap const & rhs )
 
 // Functions -------------------------------------------------------------------
 
-void	DiamondTrap::attack(const std::string& target)
-{
-	if (this->_energyPoints == 0 || this->_hitPoints == 0)
-	{
-		std::cout << "DiamondTrap " << this->_name 
-		<< " can't do anything without enery points and hit points.\n";
-	}
-	else
-	{
-		std::cout << "DiamondTrap " << this->_name << " attacks " << target << ", causing "
-		<< this->_attackDamage << " points of damage !\n";
-		this->_energyPoints -= 1;
-	}
-}
-
 void DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap is" << this->_name << " and it's ClapTrap name is " << << ".\n";
+	std::cout << "DiamondTrap is" << this->_name << " and it's ClapTrap name is " << _defaultName << ".\n";
 }

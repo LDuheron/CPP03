@@ -6,18 +6,19 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:43:02 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/07 08:53:50 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:32:32 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
+# include "DiamondTrap.hpp"
 
 int	main(void)
 {
-	FragTrap a;
-	FragTrap b(a);
+	DiamondTrap a;
+	DiamondTrap b(a);
 
 	// std::cout << a;
 	std::cout << b;
