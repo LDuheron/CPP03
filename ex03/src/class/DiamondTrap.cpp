@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:10:32 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 17:33:25 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 17:53:57 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,5 @@ std::ostream &		operator<<(std::ostream & lhs, DiamondTrap const & rhs )
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap is" << this->_name << " and it's ClapTrap name is " << _defaultName << ".\n";
+	std::cout << "DiamondTrap is " << this->_name << " and it's ClapTrap name is " << _defaultName << ".\n";
 }
