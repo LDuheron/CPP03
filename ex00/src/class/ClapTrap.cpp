@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:42 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/06 17:30:15 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:30:28 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,7 +137,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	}
 	else
 	{
-		std::cout << "ClapTrap " << _name << " is attacked ! It has lost " << amount 
+		std::cout << "ClapTrap " << this->_name << " is attacked ! It has lost " << amount 
 		<< " hit points.\n";
 		this->_hitPoints -= amount;
 		if (this->_hitPoints < 0)
