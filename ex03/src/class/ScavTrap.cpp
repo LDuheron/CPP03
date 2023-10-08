@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 17:49:36 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/07 08:48:45 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:39:40 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ void	ScavTrap::attack(const std::string& target)
 	if (this->_energyPoints == 0 || this->_hitPoints == 0)
 	{
 		std::cout << "ScavTrap " << this->_name 
-		<< " can't do anything without enery points and hit points.\n";
+		<< " can't do anything without energy points and hit points.\n";
 	}
 	else
 	{

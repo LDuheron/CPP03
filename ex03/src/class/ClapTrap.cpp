@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:42 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 19:31:22 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:54:04 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ void	ClapTrap::attack(const std::string& target)
 	if (this->_energyPoints == 0 || this->_hitPoints == 0)
 	{
 		std::cout << "ClapTrap " << this->_name 
-		<< " can't do anything without enery points and hit points.\n";
+		<< " can't do anything without energy points and hit points.\n";
 	}
 	else
 	{
@@ -141,15 +141,16 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	if (this->_energyPoints == 0 || this->_hitPoints == 0)
 	{
 		std::cout << "ClapTrap " << this->_name 
-		<< " can't do anything without enery points and hit points.\n";
+		<< " can't do anything without energy points and hit points.\n";
 	}
 	else
 	{
 		std::cout << "ClapTrap " << this->_name << " is attacked ! It has lost " << amount 
 		<< " hit points.\n";
-		this->_hitPoints -= amount;
-		if (this->_hitPoints < 0)
+		if (this->_hitPoints < amount)
 			this->_hitPoints = 0;
+		else
+			this->_hitPoints -= amount;
 	}
 }
 
@@ -158,7 +159,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	if (this->_energyPoints == 0 || this->_hitPoints == 0)
 	{
 		std::cout << "ClapTrap " << this->_name 
-		<< " can't do anything without enery points and hit points.\n";
+		<< " can't do anything without energy points and hit points.\n";
 	}
 	else
 	{
