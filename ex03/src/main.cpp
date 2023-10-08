@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:43:02 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 21:25:27 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 22:33:00 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 	// std::cout << a;
 	// std::cout << "\n";
 
-	a.attack("Karim");
+	// a.attack("Karim");
 	// std::cout << "\n";
 
 	// a.whoAmI();

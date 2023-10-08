@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:10:32 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 21:52:01 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 22:41:43 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,11 @@
  * @return	The newly created DiamondTrap instance.
  */
 
-DiamondTrap::DiamondTrap() : ClapTrap("Axel_clap_name", FragTrap::_defaultAttackDamage, 
-ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints)
+DiamondTrap::DiamondTrap() : ClapTrap(DiamondTrap::_defaultName + std::string("_clap_name"), FragTrap::_defaultAttackDamage, 
+ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints), ScavTrap(), FragTrap(), _name(DiamondTrap::_defaultName)
 {
 	std::cout << "DiamondTrap default constructor called.\n";
 }
-
-// DiamondTrap::DiamondTrap() : ClapTrap("Axel_clap_trap"), ScavTrap(), FragTrap()
-// {
-// 	std::cout << "DiamondTrap default constructor called.\n";
-// }
 
 /**
  * @brief	Construct a new `DiamondTrap` instance,
@@ -39,14 +34,14 @@ ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints)
  * @param	src is the model instance. 
  */
 DiamondTrap::DiamondTrap( const DiamondTrap & src ) : ClapTrap(src._defaultName,
- src._defaultAttackDamage, src._defaultEnergyPoints, src._defaultHitPoints)
+src._defaultAttackDamage, src._defaultEnergyPoints, src._defaultHitPoints), ScavTrap(), FragTrap(), _name(DiamondTrap::_defaultName)
 {
 	std::cout << "DiamondTrap copy constructor called.\n";
 }
 
 DiamondTrap::DiamondTrap( std::string name ) :
 ClapTrap(name + std::string("_clap_name"), FragTrap::_defaultAttackDamage, 
-ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints)
+ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints), ScavTrap(), FragTrap(), _name(DiamondTrap::_defaultName)
 {
 	std::cout << "DiamondTrap default constructor called.\n";
 }
