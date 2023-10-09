@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:42 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/09 15:09:08 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:12:14 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ std::string		ClapTrap::_defaultName("Heidi");
 ClapTrap::ClapTrap() : _name(ClapTrap::_defaultName), _attackDamage(ClapTrap::_defaultAttackDamage),
 _energyPoints(ClapTrap::_defaultEnergyPoints),_hitPoints(ClapTrap::_defaultHitPoints)
 {
-	std::cout << "Default constructor called.\n";
+	std::cout << "ClapTrap default constructor called.\n";
 }
 
 /**
@@ -40,7 +40,7 @@ _energyPoints(ClapTrap::_defaultEnergyPoints),_hitPoints(ClapTrap::_defaultHitPo
 ClapTrap::ClapTrap( const ClapTrap & src ) : _name(src._name), _attackDamage(src._attackDamage),
 _energyPoints(src._energyPoints), _hitPoints(src._hitPoints)
 {
-	std::cout << "Copy constructor called.\n";
+	std::cout << "ClapTrap copy constructor called.\n";
 }
 
 
