@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:29 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 19:26:06 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 20:13:20 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class ScavTrap : public ClapTrap
 		void					setEnergyPoints(unsigned int const energyPoints);
 		void					setHitPoints(unsigned int const hitPoints);
 
-		ScavTrap &		operator=( ScavTrap const & rhs );
+		ScavTrap &				operator=( ScavTrap const & rhs );
 		
 		void					attack(const std::string& target);
 

@@ -6,16 +6,16 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:17:48 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 20:13:03 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:49:09 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
+# include "ClapTrap.hpp"
 # include <iostream>
 # include <string>
-# include "ClapTrap.hpp"
 
 class FragTrap : public virtual ClapTrap
 {

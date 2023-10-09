@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:10:32 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 22:41:43 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:05:48 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
  * @return	The newly created DiamondTrap instance.
  */
 
-DiamondTrap::DiamondTrap() : ClapTrap(DiamondTrap::_defaultName + std::string("_clap_name"), FragTrap::_defaultAttackDamage, 
-ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints), ScavTrap(), FragTrap(), _name(DiamondTrap::_defaultName)
+DiamondTrap::DiamondTrap() : ClapTrap(DiamondTrap::_defaultName + std::string("_clap_name"), DiamondTrap::_defaultAttackDamage, 
+DiamondTrap::_defaultEnergyPoints, DiamondTrap::_defaultHitPoints), ScavTrap(), FragTrap(), _name(DiamondTrap::_defaultName)
 {
 	std::cout << "DiamondTrap default constructor called.\n";
 }
@@ -33,17 +33,16 @@ ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints), ScavTrap(), FragTr
  * 
  * @param	src is the model instance. 
  */
-DiamondTrap::DiamondTrap( const DiamondTrap & src ) : ClapTrap(src._defaultName,
-src._defaultAttackDamage, src._defaultEnergyPoints, src._defaultHitPoints), ScavTrap(), FragTrap(), _name(DiamondTrap::_defaultName)
+DiamondTrap::DiamondTrap( const DiamondTrap & src ) : ClapTrap(src), ScavTrap(), FragTrap(), _name(src._name)
 {
 	std::cout << "DiamondTrap copy constructor called.\n";
 }
 
 DiamondTrap::DiamondTrap( std::string name ) :
-ClapTrap(name + std::string("_clap_name"), FragTrap::_defaultAttackDamage, 
-ScavTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints), ScavTrap(), FragTrap(), _name(DiamondTrap::_defaultName)
+ClapTrap(name + std::string("_clap_name"), DiamondTrap::_defaultAttackDamage, 
+DiamondTrap::_defaultEnergyPoints, DiamondTrap::_defaultHitPoints), ScavTrap(), FragTrap(), _name(name)
 {
-	std::cout << "DiamondTrap default constructor called.\n";
+	std::cout << "DiamondTrap name constructor called.\n";
 }
 
 // Destructor ------------------------------------------------------------------
@@ -99,10 +98,14 @@ void	DiamondTrap::setHitPoints(unsigned int const hitPoints)
 
 DiamondTrap &				DiamondTrap::operator=( DiamondTrap const & rhs )
 {
-	this->_name = rhs._name;
-	this->_hitPoints = rhs._hitPoints;
-	this->_energyPoints = rhs._energyPoints;
-	this->_attackDamage = rhs._attackDamage;
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+		this->ClapTrap::_name = rhs.ClapTrap::_name;
+	}
 	return *this;
 }
 
@@ -119,5 +122,5 @@ std::ostream &		operator<<(std::ostream & lhs, DiamondTrap const & rhs )
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap name is " << this->_name << " and it's ClapTrap name is " << _defaultName << ".\n";
+	std::cout << "DiamondTrap name is " << this->_name << " and it's ClapTrap name is " << this->ClapTrap::_name << ".\n";
 }

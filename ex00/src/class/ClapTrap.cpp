@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:42 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 20:04:54 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:09:46 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,13 @@ void	ClapTrap::setHitPoints(unsigned int const hitPoints)
 
 ClapTrap &				ClapTrap::operator=( ClapTrap const & rhs )
 {
-	this->_name = rhs._name;
-	this->_hitPoints = rhs._hitPoints;
-	this->_energyPoints = rhs._energyPoints;
-	this->_attackDamage = rhs._attackDamage;
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+	}
 	return *this;
 }
 

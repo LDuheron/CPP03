@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:42 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 21:18:36 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:03:50 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ std::string		ClapTrap::_defaultName("Heidi");
 ClapTrap::ClapTrap() : _name(ClapTrap::_defaultName), _attackDamage(ClapTrap::_defaultAttackDamage),
 _energyPoints(ClapTrap::_defaultEnergyPoints),_hitPoints(ClapTrap::_defaultHitPoints)
 {
-	std::cout << "Default constructor called.\n";
+	std::cout << "ClapTrap default constructor called.\n";
 }
 
 /**
@@ -40,20 +40,20 @@ _energyPoints(ClapTrap::_defaultEnergyPoints),_hitPoints(ClapTrap::_defaultHitPo
 ClapTrap::ClapTrap( const ClapTrap & src ) : _name(src._name), _attackDamage(src._attackDamage),
 _energyPoints(src._energyPoints), _hitPoints(src._hitPoints)
 {
-	std::cout << "Copy constructor called.\n";
+	std::cout << "ClapTrap copy constructor called.\n";
 }
 
 
 ClapTrap::ClapTrap( unsigned int attackDamage, unsigned int energyPoints, unsigned int hitPoints) : 
 _name(ClapTrap::_defaultName), _attackDamage(attackDamage), _energyPoints(energyPoints), _hitPoints(hitPoints)
 {
-	std::cout << "ClapTrap constructor called.\n";
+	std::cout << "ClapTrap values constructor called.\n";
 }
 
 ClapTrap::ClapTrap( std::string name, unsigned int attackDamage, unsigned int energyPoints, unsigned int hitPoints) : 
 _name(name), _attackDamage(attackDamage), _energyPoints(energyPoints), _hitPoints(hitPoints)
 {
-	std::cout << "ClapTrap constructor called.\n";
+	std::cout << "ClapTrap name + values constructor called.\n";
 }
 
 // Destructor ------------------------------------------------------------------
@@ -109,10 +109,13 @@ void	ClapTrap::setHitPoints(unsigned int const hitPoints)
 
 ClapTrap &				ClapTrap::operator=( ClapTrap const & rhs )
 {
-	this->_name = rhs._name;
-	this->_hitPoints = rhs._hitPoints;
-	this->_energyPoints = rhs._energyPoints;
-	this->_attackDamage = rhs._attackDamage;
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+	}
 	return *this;
 }
 

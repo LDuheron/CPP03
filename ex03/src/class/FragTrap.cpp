@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 08:49:00 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 20:08:33 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:55:49 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,6 @@ unsigned int	FragTrap::_defaultHitPoints(100);
  * 
  * @return	The newly created FragTrap instance.
  */
-// FragTrap::FragTrap() : _name("Jonathan"), _attackDamage(FragTrap::_defaultAttackDamage),
-// _energyPoints(FragTrap::_defaultEnergyPoints),_hitPoints(FragTrap::_defaultHitPoints)
-// {
-// 	std::cout << "FragTrap default constructor called.\n";
-// }
-
 FragTrap::FragTrap() : ClapTrap(FragTrap::_defaultAttackDamage, FragTrap::_defaultEnergyPoints, FragTrap::_defaultHitPoints)
 {
 	std::cout << "FragTrap default constructor called.\n";
@@ -101,10 +95,13 @@ void	FragTrap::setHitPoints(unsigned int const hitPoints)
 
 FragTrap &				FragTrap::operator=( FragTrap const & rhs )
 {
-	this->_name = rhs._name;
-	this->_hitPoints = rhs._hitPoints;
-	this->_energyPoints = rhs._energyPoints;
-	this->_attackDamage = rhs._attackDamage;
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+	}
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:43:02 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 22:33:00 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:07:07 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	main(void)
 {
 	DiamondTrap a("Meryem");
 	DiamondTrap b;
+	DiamondTrap	c(a);
 
 	// std::cout << b;
 	// std::cout << a;
@@ -37,6 +38,8 @@ int	main(void)
 	std::cout << "\n";
 	b.whoAmI();
 	std::cout << "\n";
+	c.whoAmI();
+	std::cout << '\n';
 
 	// a.highFivesGuys();
 	// std::cout << "\n";

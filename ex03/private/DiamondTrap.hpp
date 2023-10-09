@@ -6,15 +6,13 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 09:16:39 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 21:31:56 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:40:43 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DIAMONDTRAP_HPP
 # define DIAMONDTRAP_HPP
 
-# include <iostream>
-# include <string>
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
@@ -32,7 +30,6 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap();
 		DiamondTrap( std::string name );
 		DiamondTrap( DiamondTrap const & src );
-		DiamondTrap( unsigned int _attackDamage, unsigned int _energyPoints, unsigned int _hitPoints);
 		~DiamondTrap();
 
 		std::string const		&getName(void) const;
@@ -49,7 +46,6 @@ class DiamondTrap : public ScavTrap, public FragTrap
 
 		using					ScavTrap::attack;
 		void					whoAmI();
-
 };
 
 std::ostream &			operator<<( std::ostream & o, DiamondTrap const & i );

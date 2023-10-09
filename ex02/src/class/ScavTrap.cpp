@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 17:49:36 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 19:59:28 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:08:41 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,6 @@ unsigned int	ScavTrap::_defaultHitPoints(100);
  * 
  * @return	The newly created ScavTrap instance.
  */
-// ScavTrap::ScavTrap() : _name("Jonathan"), _attackDamage(ScavTrap::_defaultAttackDamage),
-// _energyPoints(ScavTrap::_defaultEnergyPoints),_hitPoints(ScavTrap::_defaultHitPoints)
-// {
-// 	std::cout << "ScavTrap default constructor called.\n";
-// }
-
 ScavTrap::ScavTrap() : ClapTrap(ScavTrap::_defaultAttackDamage, ScavTrap::_defaultEnergyPoints, ScavTrap::_defaultHitPoints)
 {
 	std::cout << "ScavTrap default constructor called.\n";
@@ -101,10 +95,13 @@ void	ScavTrap::setHitPoints(unsigned int const hitPoints)
 
 ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
 {
-	this->_name = rhs._name;
-	this->_hitPoints = rhs._hitPoints;
-	this->_energyPoints = rhs._energyPoints;
-	this->_attackDamage = rhs._attackDamage;
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+	}
 	return *this;
 }
 
